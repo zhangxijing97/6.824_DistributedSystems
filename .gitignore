@@ -1,0 +1,29 @@
+# Go build artifacts
+*.exe
+*.test
+*.out
+main
+
+# Go workspace files
+go.work
+go.work.sum
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Coverage reports
+coverage.out
+
+# Temporary files
+tmp/
+*.tmp
