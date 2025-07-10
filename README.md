@@ -1,7 +1,7 @@
 # MIT6.824_DistributedSystems
 
 This repository contains my implementations and notes for **MIT 6.824: Distributed Systems**, Spring 2025.  
-Course site: [https://pdos.csail.mit.edu/6.824/](https://pdos.csail.mit.edu/6.824/)
+Course site: [https://pdos.csail.mit.edu/6.824/schedule.html/](https://pdos.csail.mit.edu/6.824/schedule.html/)
 
 # Table of Contents
 
@@ -24,7 +24,7 @@ Course site: [https://pdos.csail.mit.edu/6.824/](https://pdos.csail.mit.edu/6.82
 ### What I mean by "distributed system":
 A group of computers cooperating to provide a service.
 
-### So why do people build distributed systems?
+### Why do people build distributed systems?
 - to increase capacity via parallel processing
 - to tolerate faults via replication
 - to match distribution of physical devices e.g. sensors
