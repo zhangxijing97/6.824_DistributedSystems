@@ -8,13 +8,13 @@ main
 go.work
 go.work.sum
 
-# IDE/editor configs
+# Editor & IDE config files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS-specific files
+# macOS and Windows system files
 .DS_Store
 Thumbs.db
 
@@ -24,6 +24,8 @@ Thumbs.db
 # Coverage reports
 coverage.out
 
-# Temporary files
+# Temporary & cache files
 tmp/
 *.tmp
+*.bak
+*.cache
