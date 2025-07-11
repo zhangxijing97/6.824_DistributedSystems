@@ -7,6 +7,9 @@ Course site: [https://pdos.csail.mit.edu/6.824/schedule.html/](https://pdos.csai
 
 - [MIT6.824_DistributedSystems](#mit6824_distributedsystems)
   - [Lecture 1: Introduction](#lecture-1-introduction)
+    - [What I mean by "distributed system"](#what-i-mean-by-distributed-system)
+    - [Why do people build distributed systems?](#why-do-people-build-distributed-systems)
+    - [MapReduce](#mapreduce)
   - [Lecture 2: Threads and RPC](#lecture-2-threads-and-rpc)
   - [Lecture 3: Raft – Consensus Algorithm](#lecture-3-raft--consensus-algorithm)
   - [Lecture 4: Raft Details + Lab Guide](#lecture-4-raft-details--lab-guide)
@@ -53,7 +56,7 @@ A group of computers cooperating to provide a service.
   - Data shuffling
   - Parallel execution
 
-### Abstract View of a MapReduce Job — Word Count
+#### Abstract View of a MapReduce Job — Word Count
 
 ```
 Input1 -> Map -> a,1 b,1
@@ -77,7 +80,7 @@ Input3 -> Map -> a,1 c,1
    - Then passes each `(key, list of values)` to a `Reduce()` call
 4. Final output is the set of `<key, value>` pairs returned by `Reduce()` functions
 
-### MapReduce Scales Well
+#### MapReduce Scales Well
 
 - If you have N worker computers, you can (in theory) get N× throughput
 - Why?
