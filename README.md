@@ -30,6 +30,53 @@ A group of computers cooperating to provide a service.
 - to match distribution of physical devices e.g. sensors
 - to increase security via isolation
 
+### MapReduce
+
+#### Context: Multi-hour Computations on Multi-Terabyte Data Sets
+
+- Use cases include:
+  - Building search indexes
+  - Sorting large datasets
+  - Analyzing the structure of the web
+- These tasks are only practical with thousands of machines running in parallel
+
+#### Big Goal: Simplicity for Non-Specialist Programmers
+
+- Programmers only need to define two simple functions:
+  - `Map()`
+  - `Reduce()`
+- These functions are typically simple sequential code
+- MapReduce handles all the complexity:
+  - Distribution
+  - Task scheduling
+  - Fault tolerance
+  - Data shuffling
+  - Parallel execution
+
+### Abstract View of a MapReduce Job — Word Count
+
+```
+Input1 -> Map -> a,1 b,1
+Input2 -> Map -> b,1
+Input3 -> Map -> a,1 c,1
+| | |
+| | -> Reduce -> c,1
+| -----> Reduce -> b,2
+---------> Reduce -> a,2
+```
+
+#### Execution Steps
+
+1. Input is pre-split into M pieces
+2. MapReduce system:
+   - Calls `Map()` for each split
+   - Each `Map()` returns a list of `(key, value)` pairs — known as intermediate data
+   - Each call to `Map()` is a separate task
+3. When all `Map()` tasks are finished:
+   - MapReduce groups all intermediate values by key
+   - Then passes each `(key, list of values)` to a `Reduce()` call
+4. Final output is the set of `<key, value>` pairs returned by `Reduce()` functions
+
 ## Lecture 2: Threads and RPC
 
 - Concepts: concurrency, race conditions, Go RPC primitives.
