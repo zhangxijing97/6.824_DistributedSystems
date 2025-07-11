@@ -77,6 +77,16 @@ Input3 -> Map -> a,1 c,1
    - Then passes each `(key, list of values)` to a `Reduce()` call
 4. Final output is the set of `<key, value>` pairs returned by `Reduce()` functions
 
+### MapReduce Scales Well
+
+- If you have N worker computers, you can (in theory) get N× throughput
+- Why?
+  - `Map()` functions can run in parallel, because they don't depend on each other
+  - `Reduce()` functions can also run in parallel, each handling different keys
+- Therefore:
+  - More computers → More throughput
+  - 🚀 Very nice!
+
 ## Lecture 2: Threads and RPC
 
 - Concepts: concurrency, race conditions, Go RPC primitives.
